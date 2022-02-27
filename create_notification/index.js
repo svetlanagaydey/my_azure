@@ -1,7 +1,8 @@
 const CosmosClient = require("@azure/cosmos").CosmosClient;
+require('dotenv').config();
 
 const endpoint = 'https://hbinnovation.documents.azure.com:443/';
-const key = 'yFPmoYFZYgcWqJWDk6cBhjo34qg7EhKN1sol3JjEtgPlnNnN4MzowkVXOXZscsQ3hqyycgd7nyyq3Ox9POHR3Q==';
+const key = process.env.COSMOS_KEY;
 
 const client = new CosmosClient({ endpoint, key});
 
